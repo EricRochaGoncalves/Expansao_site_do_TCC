@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=S, initial-scale=1.0">
+    <title>Orientações TCC grupo Laíza</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo"> <h1>STARPOOLK </h1></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <button id="btn-header"><a href="">login</a></button>
+        </div>
+        <div class="hamburguer" onclick="toggleMenu()">&#9776;</div>
+    </header>
+
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Educação Financeira Inteligente para o seu Futuro!</h1>
+            <p>Aproveite os melhores conteúdos sobre finanças.</p>
+            <button id="btn_hero_01"> <a href="">Começar</a></button>
+            <button id="btn_hero_02"> <a href="">Projetos</a></button>
+        </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="cards">
+        <!-- 1º Flip card - Introdução aos Juros Compostos -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Juros Compostos</h2>
+                    <i class="fas fa-percentage fa-2x"></i>
+                    <p>Saiba o que são e como funcionam os juros compostos.</p>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Como funciona:</h3>
+                    <p>Exemplo: Investimento de R$ 1.000,00 a 5% ao mês.</p>
+                    <i class="fas fa-calculator fa-2x"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2º Flip card - Fórmula Juros Compostos -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Fórmula</h2>
+                    <i class="fas fa-equals fa-2x"></i>
+                    <p>Aprenda a fórmula dos juros compostos.</p>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Fórmula:</h3>
+                    <p>A = P(1 + i)<sup>n</sup></p>
+                    <i class="fas fa-chart-line fa-2x"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3º Flip card - Aplicação dos Juros Compostos -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Aplicações</h2>
+                    <i class="fas fa-piggy-bank fa-2x"></i>
+                    <p>Veja onde aplicar juros compostos.</p>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Exemplos:</h3>
+                    <p>Investimentos e financiamentos.</p>
+                    <i class="fas fa-coins fa-2x"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4º Flip card - Educação Financeira -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Educação Financeira</h2>
+                    <i class="fas fa-university fa-2x"></i>
+                    <p>Gerencie suas finanças com sabedoria.</p>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Dicas:</h3>
+                    <p>Aprenda a economizar e investir.</p>
+                    <i class="fas fa-wallet fa-2x"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- About -->
+    <section class="section-container">
+        <div class="image-column">
+            <img src="./img/2149113558.jpg" alt="Business people">
+            <img src="./img/2149113558.jpg" alt="Woman working on laptop">
+        </div>
+
+        <div class="text-column">
+            <h5>PROJETO EDUCACIONAL</h5>
+            <h2>Feito por Alunos do Ensino Médio com Foco na <span class="highlight">Educação Financeira</span></h2>
+            <p>Este site foi desenvolvido por estudantes do curso técnico em Informática para Internet, com o objetivo
+                de proporcionar conhecimento sobre finanças pessoais de forma acessível e prática para todos.</p>
+
+            <!-- Conteúdos sobre Educação Financeira -->
+            <div class="services-container">
+                <div class="service">
+                    <span class="icon"><i class="fas fa-wallet"></i></span>
+                    <div class="service-text">
+                        <h4>Planejamento Financeiro Pessoal</h4>
+                        <p>Saiba como organizar suas finanças, criar um orçamento eficiente e controlar seus gastos.</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <span class="icon"><i class="fas fa-piggy-bank"></i></span>
+                    <div class="service-text">
+                        <h4>Economia e Poupança</h4>
+                        <p>Dicas para economizar no dia a dia e atingir suas metas de poupança.</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <span class="icon"><i class="fas fa-chart-line"></i></span>
+                    <div class="service-text">
+                        <h4>Investimentos Iniciais</h4>
+                        <p>Entenda os primeiros passos no mundo dos investimentos e como fazer seu dinheiro crescer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="read-more">Leia Mais</button>
+        </div>
+
+    </section>
+
+
+    <!-- Services -->
+    <section id="educacao-financeira">
+        <div class="background-img"></div>
+        <h2>Nossos serviços exclusivos</h2>
+        <div class="servicos-container">
+            <!-- card 01  -->
+            <div class="servico-card">
+                <i class="fas fa-wallet"></i>
+                <h3>Planejamento Financeiro</h3>
+                <p>
+                    Auxiliamos no controle financeir de gastos e Planejamento
+                    financeiro pessoal para garantir uma vida financeira saúdavel.
+                </p>
+            </div>
+            <!-- card 02  -->
+            <div class="servico-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Investimentos</h3>
+                <p>
+                    Aprenda sobre os melhores investimentos para construir patrimônio
+                    e alcança a independência financeira.
+                </p>
+            </div>
+            <!-- card 03  -->
+            <div class="servico-card">
+                <i class="fas fa-coins"></i>
+                <h3>Educação em Criptomoedas</h3>
+                <p>
+                    Entenda como funciona o mercado de criptomoedas e como investir de forma consciente
+                    nesse novo segmento.
+                </p>
+            </div>
+            <!-- card 04  -->
+            <div class="servico-card">
+                <i class="fas fa-piggy-bank"></i>
+                <h3>Poupança e Aposentadoria</h3>
+                <p>
+                    Planeje sua aposentadoria e economize de forma eficaz para
+                    garantir um futuro tranquilo.
+                </p>
+            </div>
+            <!-- card 05  -->
+            <div class="servico-card">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h3>Consultoria Fiscal</h3>
+                <p>
+                    Oferecemos orientações sobre como organizar suas finanças
+                    e impostos para maximizar seus ganhos.
+                </p>
+            </div>
+            <!-- card 06  -->
+            <div class="servico-card">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h3>Créditos e Empréstimos</h3>
+                <p>
+                    Entenda como funcionam os empréstimos, taxas de juros e crédito pessoal
+                    para evitar dívidas.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Team -->
+    <section class="team-section">
+
+        <div class="team-header">
+            <h3>TEAM MEMBER</h3>
+            <H1>Conheça os membros de nossa equipe</H1>
+            <div class="underline"></div>
+            <a href="#" class="view-all-btn">Virar Membro</a>
+        </div>
+
+        <div class="team-members">
+            <!-- Member 01 -->
+            <div class="member">
+                <img src="./img/WhatsApp Image 2024-10-07 at 12.18.30.jpeg" alt="">
+                <h4>Laíza Barreto</h4>
+                <p>DEVELOPER</p>
+                <div class="overlay">
+                    <a href="#" class="icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Member 02 -->
+            <div class="member">
+                <img src="./img/WhatsApp Image 2024-10-07 at 12.18.42.jpeg" alt="">
+                <h4>Eric Rocha</h4>
+                <p>DEVELOPER</p>
+                <div class="overlay">
+                    <a href="#" class="icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Member 03 -->
+            <div class="member">
+                <img src="./img/WhatsApp Image 2024-10-07 at 13.23.47.jpeg" alt="">
+                <h4>Daiana Araújo</h4>
+                <p>DOCUMENTALISTA</p>
+                <div class="overlay">
+                    <a href="#" class="icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Member 04 -->
+            <div class="member">
+                <img src="./img/WhatsApp Image 2024-10-16 at 12.29.39.jpeg" alt="">
+                <h4>Diego Neves</h4>
+                <p>DESING</p>
+                <div class="overlay">
+                    <a href="#" class="icon">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Seção de etapas do processo -->
+    <section class="process">
+        <h2>Processo de Aprendizado</h2>
+        <h1>Como você aprende Educação Financeira</h1>
+        <div class="process-steps">
+
+            <!-- Etapa 1 -->
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Introdução à Matemática Financeira</h3>
+                <p>Aprenda os conceitos matemáticos essenciais que formam a base da educação financeira, como adição,
+                    subtração e porcentagens.</p>
+                <button class="learn-more-btn" data-modal="modal1">Saiba mais</button>
+            </div>
+
+            <!-- Etapa 2 -->
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Economizando e Investindo</h3>
+                <p>Entenda como a matemática pode ajudá-lo a calcular poupanças e investimentos, maximizando seu futuro financeiro.</p>
+                <button class="learn-more-btn" data-modal="modal2">Saiba mais</button>
+            </div>
+
+            <!-- Etapa 3 -->
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Planejamento Financeiro</h3>
+                <p>Aprenda como usar a matemática para elaborar um planejamento financeiro eficaz e alcançar seus objetivos.</p>
+                <button class="learn-more-btn" data-modal="modal3">Saiba mais</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h2>Importância da Matemática na Educação Financeira</h2>
+            <p>A matemática é fundamental para entender o valor do dinheiro e como ele circula. Compreender operações
+                básicas e conceitos como porcentagens e juros é crucial para tomar decisões financeiras informadas.</p>
+            <button class="close-btn">Fechar</button>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <h2>A Importância da Matemática em Economia e Investimentos</h2>
+            <p>Aprender a economizar e investir exige uma compreensão sólida de conceitos matemáticos, como juros simples e compostos. Essas habilidades são cruciais para planejar e garantir um futuro financeiro estável.</p>
+            <button class="close-btn">Fechar</button>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <h2>Planejamento Financeiro Eficiente</h2>
+            <p>Um bom planejamento financeiro envolve cálculos precisos, como orçamentos e projeções de despesas e receitas. Compreender esses conceitos matemáticos é essencial para garantir que você atinja suas metas financeiras.</p>
+            <button class="close-btn">Fechar</button>
+        </div>
+    </div>
+
+
+    <!-- Info Section -->
+    <section class="info-section">
+    <div class="bg-video">
+        <video autoplay muted loop>
+            <source src="./img/1102989_1080p_Numbers_1280x720.mp4" type="video/mp4">
+        </video>
+    </div>
+        <div class="info-content">
+            <p class="contact-number">+55 13 981326971</p>
+            <h1>Solicite mais informações</h1>
+            <p>
+                Entre em contato para saber mais sobre os nossos serviços e como
+                podemos ajudar você ou sua empresa a alcançar seus objetivos
+            </p>
+            <div class="cta-buttons">
+                <button class="btn join-now" id="join_now_btn"><a id="join_now_btn_link" href="">Saiba mais</a></button>
+                <button class="btn play-button">
+                    <i class="fas fa-play"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="statistics-section">
+        <div class="stats-container">
+            <!-- stat 01 -->
+            <div class="stat">
+                <h2>15K</h2>
+                <p>Clientes Satisfeitos</p>
+            </div>
+            <!-- stat 02 -->
+            <div class="stat">
+                <h2>1280+</h2>
+                <p>Número de contas</p>
+            </div>
+            <!-- stat 03 -->
+            <div class="stat">
+                <h2>12K</h2>
+                <p>Projetos Concluído</p>
+            </div>
+            <!-- stat 04 -->
+            <div class="stat">
+                <h2>992K</h2>
+                <p>Prêmios Vencidos</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section class="newsletter-section">
+        <h2>Assine nosos serviços já</h2>
+        <div class="newsletter-container">
+            <input type="email" placeholder="Enter Your Email*" required class="email-input">
+            <button class="subscribe-button">Assinar</button>
+        </div>
+    </section>
+    
+  
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <h2></h2>
+                <p>Completely strategize client-centric Phosfluorescently iterate efficient internal or organic.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Our Team</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-posts">
+                <h3>Popular Post</h3>
+                <div class="post-item">
+                    <img src="./img/close-up-education-economy-objects.jpg" alt="Post Image">
+                    <p>Grupo de alunos do Ensino Técnico desenvolve TCC memorável<br>
+                    <span>Outubro 11, 2024</span></p>
+                </div>
+                <div class="post-item">
+                    <img src="./img/businesswoman-reading-daily-news.jpg" alt="Post Image">
+                    <p>Educação Financeira se torna matéria obrigatória no Estado de São Paulo<br>
+                    <span>Julho 07, 2025</span></p>
+                </div>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Info</h3>
+                <p><i class="fa fa-map-marker"></i> Cananéia-SP Brasil</p>
+                <p><i class="fa fa-envelope"></i> acessoriaEducaDin@gmail.com</p>
+                <p><i class="fa fa-phone"></i> +55 13 981326971</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2022 Techno. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
