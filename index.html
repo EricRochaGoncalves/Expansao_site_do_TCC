@@ -1,282 +1,436 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/paper-plane-solid.svg" type="image/x-icon">
+    <meta name="viewport" content="width=S, initial-scale=1.0">
+    <title>Orientações TCC grupo Laíza</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://kit.fontawesome.com/1b96cfacfc.js" crossorigin="anonymous"></script>
-    
-    <title>Eric Gonçalves.</title>
+
 </head>
-<!-- Este código pode apresentar alguns erros. Se você encontrar alguma dificuldade ou tiver dúvidas, sinta-se à vontade para entrar em contato para obter assistência.
-<!--
-Se você estiver lendo isso, parabéns! Este portfólio foi feito por um pré-dev júnior. Então, se você encontrar alguns erros de estrutura ou sintaxe, não se preocupe, são apenas os meus "toques especiais". Mas calma, nada muito grave, porque estou sempre correndo atrás da evolução. :)
--->
-
-<!--
-E se você está pensando em fazer um site igual a esse, aqui vai uma dica: use uma boa fonte de design e estrutura antes de tentar reproduzir isso aqui. Sério, vai por mim!
--->
-
-<!--
-E, por favor, não se deixe enganar pelos meus erros iniciais. Estou apenas criando um novo estilo chamado "caos criativo". É uma tendência que ainda não pegou, mas quem sabe um dia! ♤
--->
- -->
-<!-- Perguntas já respondidas -->
-
-<!--
-1. "Por que você decidiu fazer este portfólio?"
-   Resposta: Porque, afinal, quem não quer mostrar suas habilidades de programação, mesmo que sejam um pouco (ou muito) imperfeitas? 
-
-2. "Quais tecnologias você usou para criar este site?"
-   Resposta: Um pouco de HTML, CSS e um toque de JavaScript... e muita coragem para enfrentar o que eu não sei!
-
-3. "Você pretende continuar melhorando suas habilidades de desenvolvimento?"
-   Resposta: Claro! Estou sempre em busca de evolução. Afinal, ninguém quer ficar preso no nível júnior para sempre, não é mesmo?
--->
-<!--
-4. "Por que você somente usa linguagem pura em seus projetos?"
-   Resposta: Porque para mim é mais dinâmico, mais rápido e organizado. Afinal, quem precisa de frameworks quando você pode se divertir com a simplicidade?
--->
 
 <body>
-    <div class="card-overlay" id="cardOverlay">
-    <div class="card">
-        <p class="typing">Este portfólio foi feito com muito carinho, mesmo que a estrutura e o visual <br> não estejam dignos <br> de um prêmio de design. <br> Agradeço pela paciência de ver meu trabalho iniciante <br>   – qualquer dúvida, é só chamar!
-   </p>
-        <p id="p_fechar_card"> Clique em qualquer lugar da tela para fechar o card </p>
-    </div>
-    </div>
-    <button id="btn-mobile">
-        <div class="btn-tracks01">
+
+    <!-- Header -->
+    <header id="home">
+        <div class="logo"> <h1>STARPOOLK </h1></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#educacao-financeira">Pages</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://portif-lio-ericgoncalves.onrender.com">Portfólio</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <button id="btn-header"><a href="">login</a></button>
+        </div>
+        <div class="hamburguer" onclick="toggleMenu()">&#9776;</div>
+    </header>
+
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Educação Financeira Inteligente para o seu Futuro!</h1>
+            <p>Aproveite os melhores conteúdos sobre finanças.</p>
+            <button id="btn_hero_01"> <a href="">Começar</a></button>
+            <button id="btn_hero_02"> <a href="">Projetos</a></button>
+        </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="cards">
+        <!-- 1º Flip card - Introdução aos Juros Compostos -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Juros Compostos</h2>
+                    <i class="fas fa-percentage fa-2x"></i>
+                    <p>Saiba o que são e como funcionam os juros compostos.</p>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Como funciona:</h3>
+                    <p>Exemplo: Investimento de R$ 1.000,00 a 5% ao mês.</p>
+                    <i class="fas fa-calculator fa-2x"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2º Flip card - Fórmula Juros Compostos -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Fórmula</h2>
+                    <i class="fas fa-equals fa-2x"></i>
+                    <p>Aprenda a fórmula dos juros compostos.</p>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Fórmula:</h3>
+                    <p>A = P(1 + i)<sup>n</sup></p>
+                    <i class="fas fa-chart-line fa-2x"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3º Flip card - Aplicação dos Juros Compostos -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Aplicações</h2>
+                    <i class="fas fa-piggy-bank fa-2x"></i>
+                    <p>Veja onde aplicar juros compostos.</p>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Exemplos:</h3>
+                    <p>Investimentos e financiamentos.</p>
+                    <i class="fas fa-coins fa-2x"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4º Flip card - Educação Financeira -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h2>Educação Financeira</h2>
+                    <i class="fas fa-university fa-2x"></i>
+                    <p>Gerencie suas finanças com sabedoria.</p>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Dicas:</h3>
+                    <p>Aprenda a economizar e investir.</p>
+                    <i class="fas fa-wallet fa-2x"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- About -->
+    <section class="section-container" id="services">
+        <div class="image-column">
+            <img src="https://img.freepik.com/free-photo/minimalistic-still-life-arrangement-with-cryptocurrency_23-2149102086.jpg?t=st=1730853700~exp=1730857300~hmac=836eef30b761ea17e5f5db15c55bc0823ac5a1159dd5cc0b9315e248b47c03ad&w=740" alt="Business people">
+            
+        </div>
+
+        <div class="text-column">
+            <h5>PROJETO EDUCACIONAL</h5>
+            <h2>Feito por Alunos do Ensino Médio com Foco na <span class="highlight">Educação Financeira</span></h2>
+            <p>Este site foi desenvolvido por estudantes do curso técnico em Informática para Internet, com o objetivo
+                de proporcionar conhecimento sobre finanças pessoais de forma acessível e prática para todos. <br>Esse site é uma versão modificada e unica reeditada por Eric Gonçalves, porque além do TCC, também serve como adcional ao portfólio levando em conta que sou eu o programador do grupo.<br> Logo abaixo, deixarei a versão original do site feito pelos alunos ;) </p>
+
+            <!-- Conteúdos sobre Educação Financeira -->
+            <div class="services-container">
+                <div class="service">
+                    <span class="icon"><i class="fas fa-wallet"></i></span>
+                    <div class="service-text">
+                        <h4>Planejamento Financeiro Pessoal</h4>
+                        <p>Saiba como organizar suas finanças, criar um orçamento eficiente e controlar seus gastos.</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <span class="icon"><i class="fas fa-piggy-bank"></i></span>
+                    <div class="service-text">
+                        <h4>Economia e Poupança</h4>
+                        <p>Dicas para economizar no dia a dia e atingir suas metas de poupança.</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <span class="icon"><i class="fas fa-chart-line"></i></span>
+                    <div class="service-text">
+                        <h4>Investimentos Iniciais</h4>
+                        <p>Entenda os primeiros passos no mundo dos investimentos e como fazer seu dinheiro crescer.</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="read-more"> <a href="https://entrega-tcc.onrender.com"> Site original.</a> </button>
+        </div>
+
+    </section>
+
+
+    <!-- Services -->
+    <section id="educacao-financeira">
+        <div class="background-img"></div>
+        <h2>Nossos serviços exclusivos</h2>
+        <div class="servicos-container">
+            <!-- card 01  -->
+            <div class="servico-card">
+                <i class="fas fa-wallet"></i>
+                <h3>Planejamento Financeiro</h3>
+                <p>
+                    Auxiliamos no controle financeir de gastos e Planejamento
+                    financeiro pessoal para garantir uma vida financeira saúdavel.
+                </p>
+            </div>
+            <!-- card 02  -->
+            <div class="servico-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Investimentos</h3>
+                <p>
+                    Aprenda sobre os melhores investimentos para construir patrimônio
+                    e alcança a independência financeira.
+                </p>
+            </div>
+            <!-- card 03  -->
+            <div class="servico-card">
+                <i class="fas fa-coins"></i>
+                <h3>Educação em Criptomoedas</h3>
+                <p>
+                    Entenda como funciona o mercado de criptomoedas e como investir de forma consciente
+                    nesse novo segmento.
+                </p>
+            </div>
+            <!-- card 04  -->
+            <div class="servico-card">
+                <i class="fas fa-piggy-bank"></i>
+                <h3>Poupança e Aposentadoria</h3>
+                <p>
+                    Planeje sua aposentadoria e economize de forma eficaz para
+                    garantir um futuro tranquilo.
+                </p>
+            </div>
+            <!-- card 05  -->
+            <div class="servico-card">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h3>Consultoria Fiscal</h3>
+                <p>
+                    Oferecemos orientações sobre como organizar suas finanças
+                    e impostos para maximizar seus ganhos.
+                </p>
+            </div>
+            <!-- card 06  -->
+            <div class="servico-card">
+                <i class="fas fa-hand-holding-usd"></i>
+                <h3>Créditos e Empréstimos</h3>
+                <p>
+                    Entenda como funcionam os empréstimos, taxas de juros e crédito pessoal
+                    para evitar dívidas.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Team -->
+    <section class="team-section">
+
+        <div class="team-header">
+            <h3>TEAM MEMBER</h3>
+            <H1>Quem sou eu?</H1>
+            <div class="underline"></div>
+            <a href="https://portif-lio-ericgoncalves.onrender.com/   " class="view-all-btn">Visitar portfólio</a>
+        </div>
+
+        <div class="team-members" id="team-members">
+            <!-- Member 01 -->
+            
+            
+            <!-- Member 02 -->
+            <div class="member">
+                <img src="https://portif-lio-ericgoncalves.onrender.com/img/eric-removebg-preview.png" alt="">
+                <h4>Eric Rocha</h4>
+                <p>Programador</p>
+                <div class="overlay">
+                    <a href="https://github.com/EricRochaGoncalves" class="icon">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://portif-lio-ericgoncalves.onrender.com" class="icon">
+                        <i class="fa-solid fa-blog"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Member 03 -->
+            
+            <!-- Member 04 -->
+           
+            </div>
 
         </div>
-        <div class="btn-tracks02">
-            
+
+    </section>
+
+    <!-- Seção de etapas do processo -->
+    <section class="process">
+        <h2>Processo de Aprendizado</h2>
+        <h1>Como você aprende Educação Financeira</h1>
+        <div class="process-steps">
+
+            <!-- Etapa 1 -->
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Introdução à Matemática Financeira</h3>
+                <p>Aprenda os conceitos matemáticos essenciais que formam a base da educação financeira, como adição,
+                    subtração e porcentagens.</p>
+                <button class="learn-more-btn" data-modal="modal1">Saiba mais</button>
+            </div>
+
+            <!-- Etapa 2 -->
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Economizando e Investindo</h3>
+                <p>Entenda como a matemática pode ajudá-lo a calcular poupanças e investimentos, maximizando seu futuro financeiro.</p>
+                <button class="learn-more-btn" data-modal="modal2">Saiba mais</button>
+            </div>
+
+            <!-- Etapa 3 -->
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Planejamento Financeiro</h3>
+                <p>Aprenda como usar a matemática para elaborar um planejamento financeiro eficaz e alcançar seus objetivos.</p>
+                <button class="learn-more-btn" data-modal="modal3">Saiba mais</button>
+            </div>
         </div>
-        <div class="btn-tracks03">
-            
+    </section>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h2>Importância da Matemática na Educação Financeira</h2>
+            <p>A matemática é fundamental para entender o valor do dinheiro e como ele circula. Compreender operações
+                básicas e conceitos como porcentagens e juros é crucial para tomar decisões financeiras informadas.</p>
+            <button class="close-btn">Fechar</button>
         </div>
-    </button>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <h2>A Importância da Matemática em Economia e Investimentos</h2>
+            <p>Aprender a economizar e investir exige uma compreensão sólida de conceitos matemáticos, como juros simples e compostos. Essas habilidades são cruciais para planejar e garantir um futuro financeiro estável.</p>
+            <button class="close-btn">Fechar</button>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <h2>Planejamento Financeiro Eficiente</h2>
+            <p>Um bom planejamento financeiro envolve cálculos precisos, como orçamentos e projeções de despesas e receitas. Compreender esses conceitos matemáticos é essencial para garantir que você atinja suas metas financeiras.</p>
+            <button class="close-btn">Fechar</button>
+        </div>
+    </div>
+
+
+    <!-- Info Section -->
+    <section class="info-section">
+    <div class="bg-video">
+        <video autoplay muted loop>
+            <source src="./img/1102989_1080p_Numbers_1280x720.mp4" type="video/mp4">
+        </video>
+    </div>
+        <div class="info-content">
+            <p class="contact-number">+55 13 981326971</p>
+            <h1>Solicite mais informações</h1>
+            <p>
+                Entre em contato para saber mais sobre os nossos serviços e como
+                podemos ajudar você ou sua empresa a alcançar seus objetivos
+            </p>
+            <div class="cta-buttons">
+                <button class="btn join-now" id="join_now_btn"><a id="join_now_btn_link" href="">Saiba mais</a></button>
+                <button class="btn play-button">
+                    <i class="fas fa-play"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="statistics-section">
+        <div class="stats-container">
+            <!-- stat 01 -->
+            <div class="stat">
+                <h2>15K</h2>
+                <p>Clientes Satisfeitos</p>
+            </div>
+            <!-- stat 02 -->
+            <div class="stat">
+                <h2>1280+</h2>
+                <p>Número de contas</p>
+            </div>
+            <!-- stat 03 -->
+            <div class="stat">
+                <h2>12K</h2>
+                <p>Projetos Concluído</p>
+            </div>
+            <!-- stat 04 -->
+            <div class="stat">
+                <h2>992K</h2>
+                <p>Prêmios Vencidos</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section class="newsletter-section" id="contact">
+        <h2>Assine nosos serviços já</h2>
+        <div class="newsletter-container">
+            <input type="email" placeholder="Enter Your Email*" required class="email-input">
+            <button class="subscribe-button">Assinar</button>
+        </div>
+    </section>
     
-
-    <nav class="nav" id="nav">
-        <div id="button-contact">
-            <a href="https://github.com/EricRochaGoncalves">Contato </a>
-        </div>
-        <div class="buttons">
-            <a href="https://portf-lio-projetos.onrender.com">Projetos</a>
-        </div>
-        <div class="buttons">
-            <a href="https://portf-lio-02.onrender.com">Habilidades</a>
-        </div>
-        <div class="buttons">
-            <a href="https://portf-lio-details.onrender.com">Sobre</a>
-        </div>
-        
-      
-    </nav>
-
-    <div class="container-001">
-        <div class="intro">
-            <div id="intro">
-                <div class="name">
-                    <h1> Eric Rocha Gonçalves </h1>
-                </div>
-                <div class="intro-text">
-                    <p>Olá! Sou o Eric, um desenvolvedor de 18 anos,<br> apaixonado por tecnologia e sempre buscando
-                        aprender.  Gosto de resolver problemas de formas simples e diretas, criando soluções
-                        eficientes e escrevendo códigos limpos.  Meu objetivo é melhorar a cada projeto e entregar o
-                        melhor resultado possível.</p>
-                </div>
-                <div class="intro-buttons">
-                    <div id="button">
-                        <a href="https://portf-lio-02.onrender.com">Vamos começar</a>
-                    </div>
+  
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <h2></h2>
+                <p>Completely strategize client-centric Phosfluorescently iterate efficient internal or organic.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
-        </div>
-        <div class="foto">
-            <div id="foto">
-                <img src="./img/eric-removebg-preview.png" alt="">
-            </div>
-        </div>
-    </div>
 
-    <div class="container-002">
-        <div class="minhas-habilidades">
-            <h1> ALGUMAS DAS MINHAS HABILIDADES.</h1>
-        </div>
-        <div class="container-cards">
-            <div class="container">
-                <div class="flip">
-                    <div class="frente">
-                        <div class="card-frente01">
-                            <div class="frente-01-img">
-                                <img src="./img/html-removebg-preview (1).png" alt="">
-                            </div>
-                        </div>
-                        <div class="card-frente02">
-                            <h1>Estruturas WEB dinâmicas & completas com HTML5</h1>
-                        </div>
-                    </div>
-                    <div class="tras">
-                        <div class="card-tras-02-01">
-                            <div class="frente-01-img">
-                                <img src="./img/html-removebg-preview (1).png" alt="">
-                            </div>
-                        </div>
-                        <div class="card-tras-02-02">
-                            <p>HTML é uma linguagem de marcação utilizada na construção de páginas na Web.
-                                <br>Documentos HTML podem ser interpretados por navegadores. <br> A tecnologia é fruto
-                                da junção entre os padrões HyTime e SGML. HyTime é um padrão para a representação
-                                estruturada de hipermídia e conteúdo baseado em tempo.
-                            </p>
-                        </div>
-                    </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#team-members">Our Team</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-posts">
+                <h3>Popular Post</h3>
+                <div class="post-item">
+                    
+                    <p>Grupo de alunos do Ensino Técnico desenvolve TCC memorável<br>
+                    <span>Outubro 11, 2024</span></p>
+                </div>
+                <div class="post-item">
+                    
+                    <p>Educação Financeira se torna matéria obrigatória no Estado de São Paulo<br>
+                    <span>Julho 07, 2025</span></p>
                 </div>
             </div>
-            <div class="container">
-                <div class="flip">
-                    <div class="frente">
-                        <div class="card-frente01">
-                            <div id="frente-01-img">
-                                <img src="./img/css-removebg-preview.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card-frente02">
-                            <h1>Sites personalizados e responsivos a maioria <br>
-                                dos dispositivos.</h1>
-                        </div>
-                    </div>
-                    <div class="tras">
-                        <div class="card-tras-02-01">
-                            <div id="frente-01-img">
-                                <img src="./img/css-removebg-preview.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card-tras-02-02">
-                            <p>CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos
-                                escritos em uma linguagem de marcação como HTML. O CSS separa o conteúdo da
-                                representação visual do site.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="flip">
-                    <div class="frente">
-                        <div class="card-frente01">
-                            <div id="frente-01-img">
-                                <img src="./img/JS.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card-frente02">
-                            <h1>Interações do site com o usuário com a <br>
-                                a linguagem de programação Java Script.</h1>
-                        </div>
-                    </div>
-                    <div class="tras">
-                        <div class="card-tras-02-01">
-                            <div id="frente-01-img">
-                                <img src="./img/JS.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card-tras-02-02">
-                            <p>JavaScript é uma linguagem de programação interpretada estruturada, de script em alto
-                                nível com tipagem dinâmica fraca e multiparadigma. Juntamente com HTML e CSS, o
-                                JavaScript é uma das três principais tecnologias da World Wide Web.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container2">
-                <div class="flip2">
-                    <div class="frente2">
-                        <div class="card-frente01">
-                            <div id="frente-01-img-bd">
-                                <img src="./img/mysql_87a2317566.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card-frente02">
-                            <h1>Bancos de dados funcionais e completos com My SQL.</h1>
-                        </div>
-                    </div>
-                    <div class="tras2">
-                        <div class="card-tras-02-01">
-                            <div id="frente-01-img-bd">
-                                <img src="./img/mysql_87a2317566.png" alt="">
-                            </div>
-                        </div>
-                        <div class="card-tras-02-02">
-                            <p>O MySQL é um sistema de gerenciamento de banco de dados, que utiliza a linguagem SQL como
-                                interface. É atualmente um dos sistemas de gerenciamento de bancos de dados mais
-                                populares da Oracle Corporation, com mais de 10 milhões de instalações pelo mundo.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container2">
-                <div class="flip2">
-                    <div class="frente2">
-                        <div class="card-frente01">
-                            <div id="frente-01-img-bd">
-                                <img src="./img/desing.jpeg" alt="">
-                            </div>
-                        </div>
-                        <div class="card-frente02">
-                            <h1>Desings personalizados e responsivos em <br> maioria dos dispositivos.</h1>
-                        </div>
-                    </div>
-                    <div class="tras2">
-                        <div class="card-tras-02-01">
-                            <div id="frente-01-img-bd">
-                                <img src="./img/desing.jpeg" alt="">
-                            </div>
-                        </div>
-                        <div class="card-tras-02-02">
-                            <p>Design é a idealização, criação, desenvolvimento, configuração, concepção, elaboração e
-                                especificação de produtos, normalmente produzidos industrialmente ou por meio de sistema
-                                de produção em série que demanda padronização dos componentes e desenho normalizado.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container2">
-                <div class="flip2">
-                    <div class="frente2">
-                        <p>Gostou de alguma das minhas habilidades ou deseja me conhecer melhor?</p>
-                    </div>
-                    <div class="tras2">
-                        <div class="cards-buttons">
-                            <a href="https://portf-lio-details.onrender.com">Mais sobre mim e portifólio</a>
-                        </div>
-                        <div class="cards-buttons">
-                            <a href="https://github.com/EricRochaGoncalves">Contato</a>
-                        </div>
-                    </div>
-                </div>
+
+            <div class="footer-contact">
+                <h3>Contact Info</h3>
+                <p><i class="fa fa-map-marker"></i> Cananéia-SP Brasil</p>
+                <p><i class="fa fa-envelope"></i> acessoriaEducaDin@gmail.com</p>
+                <p><i class="fa fa-phone"></i> +55 13 981326971</p>
             </div>
         </div>
-       </div>
-    </div>
-</section>
 
-<!--
-Então, ao revisar o código, percebi que a estrutura está com algum erro de fechamento. Não tenho certeza do que exatamente aconteceu, mas peço desculpas por qualquer confusão que isso possa ter causado. A verdade é que estou aprendendo e, como todos, cometo erros no caminho. Espero que você possa ter um pouco de paciência comigo enquanto continuo a aprimorar minhas habilidades. Cada dia é uma nova oportunidade para aprender e crescer!
+        <div class="footer-bottom">
+            <p>&copy; 2022 Techno. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
 
-A vida é cheia de `div`s não fechadas, não é mesmo? Quanto a essa parte do código, decidi que não vou continuar mexendo, pois não vejo necessidade. A maioria do site já esclarece bem o que faço de forma detalhada, e acho que isso é o mais importante!
-
-Ah, e não esqueça que há outras páginas do meu portfólio que podem ser acessadas pelo botão de navegação (se estiver no celular) ou pela barra de navegação (se estiver no PC). Lá você encontrará as outras páginas e meu contato. Fique à vontade para explorar!
--->
-
-
-<script src="script.js"></script>
+    <script src="./script.js"></script>
 
 </body>
+
 </html>
