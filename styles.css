@@ -22,14 +22,19 @@
 body {
     font-family: Arial, sans-serif;
 }
+html {
+    scroll-pading
+}
 
 /* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: fixed;
     z-index: 10;
+    background-color: white;
+    width: 100%;
 }
 
 .logo {
