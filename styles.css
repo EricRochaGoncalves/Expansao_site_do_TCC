@@ -1,5 +1,6 @@
 /* import */
-
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Parisienne&display=swap');
 /* root - Cores principais */
 :root {
     --cor-destaque: #0c656a;
@@ -11,6 +12,7 @@
     --cor-card-verso: var(--cor-secundaria);
 }
 
+
 /* Reset */
 * {
     margin: 0;
@@ -21,6 +23,7 @@
 /* Body */
 body {
     font-family: Arial, sans-serif;
+    background-color: black;
 }
 html {
     scroll-pading
@@ -35,6 +38,9 @@ header {
     z-index: 10;
     background-color: white;
     width: 100%;
+    background-color: black;
+    height: 15vh;
+    border-bottom: 2px solid white;
 }
 
 .logo {
@@ -42,14 +48,26 @@ header {
     width: 15%;
     height: 100%;
     font-weight: bold;
-    color: black;
+    color: white;
     justify-content: center;
     align-items: center;
+    
 }
 .logo h1 {
-    font-size: 25px;
+    font-size: 50px;
     letter-spacing: 1px;
     margin: 0 auto;
+    color: white;
+    padding: 0px 5px;
+    letter-spacing: 0.7px;
+    border-right: 1px solid white;
+    font-family: "Lobster", serif;
+}
+.logoimg {
+    border: 1px solid white;
+    width: 50px;
+    height: 50px;
+    display: flex;
 }
 
 
@@ -66,15 +84,29 @@ header {
 .nav-links li a {
     text-decoration: none;
     color: var(--cor-texto);
-    font-weight: 300;
+    font-weight: bold;
     letter-spacing: 1px;
 }
 .nav-links li a:hover {
-    color: var(--cor-destaque);
+    color: gray;
     transition: 0.5s;
     border-bottom: 1px solid black;
     transition: 0.5s;
-
+    transform: scale(1.2);
+}
+#summary {
+    color: white;
+    font-weight: bold;
+}
+details {
+    justify-content: center;
+}
+#details_links {
+color: white;
+text-decoration: none;
+padding: 5px 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 
@@ -98,7 +130,7 @@ header {
     letter-spacing: 1px;
 }
 #btn-header:hover{
-    background-color: var(--cor-secundaria);
+    background-color: white ;
     transition: 0.5s;
     cursor: pointer;
 }
@@ -107,7 +139,8 @@ header {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--cor-destaque);
+    color: white;
+    
 }
 
 /* Mobile Styles */
@@ -118,14 +151,16 @@ header {
         position: absolute;
         top: 100%;
         right: 0;
-        background-color: gray;
+        background-color: black;
         backdrop-filter: blur(10px);
         width: 100%;
         text-align: right;
         padding: 1.25rem;
         justify-content: center;
         align-items: center;
-        box-shadow: 0px 0px 10px 5px rgba(128, 128, 128, 0.445);
+        border-bottom: 1px solid white;
+        
+         
     }
     .nav-links li a {
         color: white;
@@ -157,7 +192,7 @@ header {
 
 /* Hero section */
 .hero {
-    background-image: url("https://img.freepik.com/free-photo/portrait-lovely-blonde-girl-doing-homework_329181-2492.jpg?ga=GA1.1.650487017.1723127523&semt=ais_hybrid");
+    background-image: url("https://img.freepik.com/free-photo/minimalistic-still-life-arrangement-with-cryptocurrency_23-2149102086.jpg?t=st=1739896808~exp=1739900408~hmac=9b0a943c4ccd0c2a2972d428db5b6ae01e80adcef5560ec06d0f409525cfff5b&w=740");
     background-size: cover;
     background-position: center;
     height: 80vh;
@@ -191,17 +226,19 @@ header {
 }
 
 .hero-content h1 {
-    font-size: 15px;
+    font-size: 21px;
     line-height: 1.2;
     margin-bottom: 1.25rem;
     letter-spacing: 0.5px;
     color: white;
+    border-bottom: 2px solid white;
 }
 
 .hero-content p {
-    font-size: 1.125rem;
+    font-size: 15px;
     margin-bottom: 1.875rem;
     color: var(--cor-fundo);
+    letter-spacing: 0.7px;
 }
 
 #btn_hero_01 {
@@ -230,7 +267,7 @@ header {
     text-decoration: none;
     color: white;
     letter-spacing: 1px;
-    font-weight: 500;
+    font-weight: bold;
 
 }
 
@@ -239,6 +276,7 @@ header {
     text-decoration: none;
     color: white;
     letter-spacing: 1px;
+    font-weight: bold;
 
 }
 
@@ -259,10 +297,15 @@ header {
     display: flex;
     justify-content: center;
     padding: 3.75rem 2.5rem;
-    background-color: #f4f4f4;
+    backgrou
     flex-wrap: wrap;
     margin-top: -9.375rem;
     gap: 1.25rem;
+    
+  background: linear-gradient(to right, #2E2E2E, #4B4B4B); /* Gradiente suave entre dois tons de cinza escuro */
+
+   /* Cinza escuro, inspirado no estilo "Pique Batman" */
+
 }
 
 .flip-card {
@@ -281,7 +324,7 @@ header {
     transform-style: preserve-3d;
     border-radius: .625rem;
     box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.2);
-    background-color: var(--cor-card-frente);
+    
 }
 
 .flip-card-front,
@@ -296,17 +339,25 @@ header {
     align-items: center;
     padding: 1.25rem;
     border-radius: .625rem;
+    
 }
 
 .flip-card-front {
-    background-color: var(--cor-card-frente);
+    
+  background: linear-gradient(to right, #D3D3D3, #FFFFFF); /* Gradiente suave do cinza claro para o branco */
+
+
     color: var(--cor-texto);
+    letter-spacing: 0.7px;
+    font-weight: bold;
 }
 
 .flip-card-back {
-    background-color: var(--cor-card-verso);
+    background-color: black;
     color: var(--cor-fundo);
     transform: rotateY(180deg);
+    letter-spacing: 0.7px;
+    font-weight: bold;
 }
 
 .flip-card:hover .flip-card-inner {
@@ -343,7 +394,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 3.125rem 1.875rem;
-    background-color: var(--cor-fundo);
+    background: linear-gradient(to right, #2E2E2E, #4B4B4B); /* Gradiente suave entre dois tons de cinza escuro */
+
+   
+
     margin: 1.25rem auto;
     border-radius: .5rem;
     position: relative;
@@ -392,23 +446,25 @@ header {
     font-size: 1.125rem;
     font-weight: bold;
     margin-bottom: .625rem;
-    color: var(--cor-secundaria);
+    color: white;
 }
 
 .text-column h2 {
     font-size: 2rem;
     margin-bottom: 1.25rem;
-    color: var(--cor-texto);
+    color: white;
 }
 
 .text-column .highlight {
-    color: var(--cor-destaque);
+    color: white;
 }
 
 .text-column p {
     font-size: 1rem;
     margin-bottom: 1.25rem;
-    color: var(--cor-neutra);
+    color: white;
+    line-height: 25px;
+    font-weight: bold;
 }
 
 /* Estilos dos Serviços */
@@ -436,25 +492,26 @@ header {
     margin: 0;
     font-size: 1.125rem;
     font-weight: bold;
-    color: var(--cor-texto);
+    color: white;
 }
 
 .service-text p {
     text-align: start;
     margin: .3125rem 0 0;
     font-size: .9375rem;
-    color: var(--cor-neutra);
+    color: white;
 }
 
 /* Botão de Leitura */
 .read-more {
-    background-color: var(--cor-destaque);
+    background-color: gray;
     border: none;
-    color: var(--cor-fundo);
+    color: black;
     padding: .9375rem 1.875rem;
     font-size: 1rem;
     cursor: pointer;
     border-radius: .3125rem;
+    letter-spacing: 0.7px;
     transition: background-color 0.3s ease;
 }
 .read-more a {
@@ -559,7 +616,7 @@ header {
     position: relative;
     text-align: center;
     padding: 3.125rem 1.875rem;
-    background-color: var(--cor-fundo);
+    background: linear-gradient(to right, #2E2E2E, #4B4B4B); /* Gradiente suave entre dois tons de cinza escuro */;
     margin: 2.5rem auto;
     border-radius: .5rem;
     position: relative;
@@ -585,7 +642,7 @@ header {
 #educacao-financeira h2 {
     font-size: 2.25rem;
     margin-bottom: 1.25rem;
-    color: var(--cor-destaque);
+    color: white;
 }
 
 /* Container de Serviços */
@@ -602,7 +659,7 @@ header {
 .servico-card {
     cursor: pointer;
     width: 18.75rem;
-    background-color: var(--cor-card-frente);
+    background: linear-gradient(to right, #D3D3D3, #FFFFFF); 
     border-radius: .5rem;
     padding: 1.25rem;
     text-align: center;
@@ -614,7 +671,7 @@ header {
 /* Efeito hover nos cartões */
 .servico-card:hover {
     transform: scale(1.05);
-    background-color: var(--cor-destaque);
+    background-color: black;
     color: var(--cor-fundo);
 }
 
@@ -625,26 +682,26 @@ header {
 }
 
 .servico-card:hover i {
-    color: var(--cor-fundo);
+    color: black;
 }
 
 .servico-card h3 {
     font-size: 1.375rem;
     margin-bottom: .625rem;
-    color: var(--cor-secundaria);
+    color: black;
 }
 
 .servico-card:hover h3 {
-    color: var(--cor-fundo);
+    color: black;
 }
 
 .servico-card p {
     font-size: .875rem;
-    color: var(--cor-neutra);
+    color: black;
 }
 
 .servico-card:hover p {
-    color: var(--cor-fundo);
+    color: black;
 }
 
 /* Responsividade */
@@ -671,14 +728,14 @@ header {
 }
 
 .process h2 {
-    color: var(--cor-destaque);
+    color: black;
     letter-spacing: .125rem;
-    font-size: 1.5rem;
+    font-size: 25px;
     margin-bottom: .625rem;
 }
 
 .process h1 {
-    font-size: 2.25rem;
+    font-size: 20px;
     margin-bottom: 3.125rem;
     color: var(--cor-texto);
 }
@@ -701,8 +758,8 @@ header {
 
 .step-number {
     font-size: 1.5rem;
-    color: var(--cor-fundo);
-    background-color: var(--cor-destaque);
+    color: white;
+    background-color: black;
     width: 3.125rem;
     height: 3.125rem;
     margin: 0 auto 1.25rem;
@@ -714,14 +771,15 @@ header {
 
 .step h3 {
     font-size: 1.25rem;
-    color: var(--cor-texto);
+    color: black;
     margin-bottom: 1.25rem;
 }
 
 .step p {
-    font-size: 1rem;
-    color: var(--cor-neutra);
+    font-size: 15px;
+    color: black;
     line-height: 1.6;
+    font-weight: bold;
 }
 
 .step:not(:last-child) {
@@ -745,7 +803,7 @@ header {
 
 /* Estilo dos botões "Saiba mais" */
 .learn-more-btn {
-    background-color: var(--cor-destaque);
+    background-color: black;
     color: white;
     padding: .625rem 1.25rem;
     border: none;
@@ -817,7 +875,7 @@ header {
 /* Info Section */
 
 .info-section {
-    background-color: #149aa160;
+    background-color: red;
     color: var(--cor-fundo);
     text-align: center;
     padding: 6.25rem 1.25rem;
@@ -927,7 +985,7 @@ header {
 }
  /* Section Statistics */
 .statistics-section {
-    background-color: var(--cor-quarta);
+    background-color: gray;
     padding: 3.125rem 1.25rem;
     display: flex;
     justify-content: center;
@@ -940,7 +998,7 @@ header {
     flex-wrap: wrap;
     width: 80%;
     max-width: 75rem;
-    background-color: var(--cor-quarta);
+    background-color: white;
     box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.1);
     border-radius: .625rem;
     padding: 1.875rem;
@@ -957,12 +1015,14 @@ header {
 .stat h2 {
     font-size: 2.25rem;
     font-weight: 700;
-    color: var(--cor-secundaria);
+    color: black;
 }
 
 .stat p {
     font-size: 1.125rem;
     color: var(--cor-opcional);
+    letter-spacing: 0.7px;
+    font-weight: bold;
 }
 
 @media (max-width: 48rem) {
@@ -1002,7 +1062,7 @@ header {
 
 /* Contact */
 .newsletter-section {
-    background-color: var(--cor-secundaria);
+    background-color: gray;
     padding: 2.5rem 1.25rem;
     text-align: center;
     margin-bottom: .625rem;
@@ -1034,7 +1094,7 @@ header {
 }
 
 .subscribe-button {
-    background-color: var(--cor-destaque);
+    background-color: black;
     border: .125rem solid var(--cor-fundo);
     color: var(--cor-fundo);
     padding: .625rem 1.25rem;
@@ -1247,7 +1307,7 @@ h1 {
 
 /* Footer */
 .footer {
-    background-color: var(--cor-secundaria);
+    background-color: black;
     padding: 3.125rem 0;
     color: var(--cor-fundo);
 }
@@ -1357,7 +1417,7 @@ h1 {
 
 .footer-posts .post-item span {
     font-size: .75rem;
-    color: var(--cor-destaque);
+    color: yellow;
 }
 
 .footer-contact p {
