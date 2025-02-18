@@ -9,6 +9,7 @@ Como desenvolvedor principal do TCC, eu quis expandir e aprimorar o software, of
 [Versão Original do Software do TCC](https://entrega-tcc.onrender.com/)
 
 # Link da Versão Expandida
+
 (https://leanding-page-baseada-no-tcc.onrender.com/)
 # Foco do Projeto
 
@@ -19,7 +20,3 @@ O objetivo principal desta versão expandida é manter o foco no front-end, cont
 ![HTML](https://img.shields.io/badge/HTML-orange?style=for-the-badge)
 ![CSS](https://img.shields.io/badge/CSS-blue?style=for-the-badge)
 ![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge)
-
----
-
-Essa versão mantém o projeto original, enquanto demonstra minha evolução como desenvolvedor e meu compromisso com o aprimoramento contínuo da aplicação.
