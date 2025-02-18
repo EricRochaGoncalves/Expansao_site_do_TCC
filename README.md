@@ -6,8 +6,10 @@ Como desenvolvedor principal do TCC, eu quis expandir e aprimorar o software, of
 
 # Link da Versão Principal
 
-[Versão Original do Software do TCC](INSIRA_AQUI_O_LINK)
+[Versão Original do Software do TCC](https://entrega-tcc.onrender.com/)
 
+# Link da Versão Expandida
+(https://leanding-page-baseada-no-tcc.onrender.com/)
 # Foco do Projeto
 
 O objetivo principal desta versão expandida é manter o foco no front-end, continuando a priorizar a interface gráfica e a experiência do usuário. Embora esta expansão não envolva integrações com APIs, a versão original e outros projetos no meu portfólio demonstram minha capacidade de trabalhar com diferentes camadas de desenvolvimento web.
