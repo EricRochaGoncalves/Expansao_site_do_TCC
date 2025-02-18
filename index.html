@@ -15,19 +15,24 @@
 
     <!-- Header -->
     <header id="home">
+    
         <div class="logo"> <h1> STARPOOLK </h1></div>
         <nav>
             <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
                 <li><a href="#services">Sobre</a></li>
                 <li><a href="#educacao-financeira">Serviços</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="https://portif-lio-ericgoncalves.onrender.com">Portfólio</a></li>
+                <details>
+                    <summary id="summary">Desenvolvedor</summary>
+                    <a href="" id="details_links">Linkedin<i class="fab fa-linkedin" style="color: white;"></i></a> <br>
+                     <a href="" id="details_links">Git Hub<i class="fab fa-github" style="color: white;"></i></a>
+                </details>
             </ul>
         </nav>
         <div class="icons">
             <button id="btn-header"><a href="">login</a></button>
         </div>
-        <div class="hamburguer" onclick="toggleMenu()">&#9776;</div>
+        <div class="hamburguer" onclick="toggleMenu()"><i class="fas fa-compass"></i></div>
     </header>
 
 
@@ -35,10 +40,10 @@
     <section class="hero" id="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>Educação Financeira Inteligente para o seu Futuro!</h1>
-            <p>Aproveite os melhores conteúdos sobre finanças.</p>
-            <button id="btn_hero_01"> <a href="">Começar</a></button>
-            <button id="btn_hero_02"> <a href="">Projetos</a></button>
+            <h1>Planejamento Financeiro Estratégico para o Seu Futuro</h1>
+<p>Descubra conteúdos essenciais para uma gestão financeira eficiente e segura.</p>
+            <button id="btn_hero_01"> <a href="">Começar ></a></button>
+            <button id="btn_hero_02"> <a href="">Serviços ></a></button>
         </div>
     </section>
 
@@ -122,27 +127,27 @@
         <div class="text-column">
             <h5>PROJETO EDUCACIONAL</h5>
             <h2>Feito por Alunos do Ensino Médio com Foco na <span class="highlight">Educação Financeira</span></h2>
-            <p>Este site foi desenvolvido por estudantes do curso técnico em Informática para Internet, com o objetivo
-                de proporcionar conhecimento sobre finanças pessoais de forma acessível e prática para todos. <br>Esse site é uma versão modificada e unica reeditada por Eric Gonçalves, porque além do TCC, também serve como adcional ao portfólio levando em conta que sou eu o programador do grupo.<br> Logo abaixo, deixarei a versão original do site feito pelos alunos ;) </p>
-
+            <p>Este site foi desenvolvido originalmente por estudantes do curso técnico em Informática para Internet, com o objetivo de fornecer informações sobre finanças pessoais de forma acessível e prática. Esta versão é uma adaptação aprimorada e expandida do software principal do TCC do curso técnico, com ajustes feitos por Eric Gonçalves, responsável pela programação do projeto. A seguir, apresentamos a versão original desenvolvida pelos alunos.</p>
             <!-- Conteúdos sobre Educação Financeira -->
             <div class="services-container">
                 <div class="service">
-                    <span class="icon"><i class="fas fa-wallet"></i></span>
+                    <span class="icon"><i class="fas fa-wallet" style="color: white;"></i>
+                        
+                    </span>
                     <div class="service-text">
                         <h4>Planejamento Financeiro Pessoal</h4>
                         <p>Saiba como organizar suas finanças, criar um orçamento eficiente e controlar seus gastos.</p>
                     </div>
                 </div>
                 <div class="service">
-                    <span class="icon"><i class="fas fa-piggy-bank"></i></span>
+                    <span class="icon"><i class="fas fa-piggy-bank" style="color: white;"></i></span>
                     <div class="service-text">
                         <h4>Economia e Poupança</h4>
                         <p>Dicas para economizar no dia a dia e atingir suas metas de poupança.</p>
                     </div>
                 </div>
                 <div class="service">
-                    <span class="icon"><i class="fas fa-chart-line"></i></span>
+                    <span class="icon"><i class="fas fa-chart-line" style="color: white;"></i></span>
                     <div class="service-text">
                         <h4>Investimentos Iniciais</h4>
                         <p>Entenda os primeiros passos no mundo dos investimentos e como fazer seu dinheiro crescer.</p>
@@ -163,7 +168,7 @@
         <div class="servicos-container">
             <!-- card 01  -->
             <div class="servico-card">
-                <i class="fas fa-wallet"></i>
+                <i class="fas fa-wallet" style = "color: black;"></i>
                 <h3>Planejamento Financeiro</h3>
                 <p>
                     Auxiliamos no controle financeir de gastos e Planejamento
@@ -172,7 +177,7 @@
             </div>
             <!-- card 02  -->
             <div class="servico-card">
-                <i class="fas fa-chart-line"></i>
+                <i class="fas fa-chart-line" style = "color: black;"></i>
                 <h3>Investimentos</h3>
                 <p>
                     Aprenda sobre os melhores investimentos para construir patrimônio
@@ -181,7 +186,7 @@
             </div>
             <!-- card 03  -->
             <div class="servico-card">
-                <i class="fas fa-coins"></i>
+                <i class="fas fa-coins" style = "color: black;"></i>
                 <h3>Educação em Criptomoedas</h3>
                 <p>
                     Entenda como funciona o mercado de criptomoedas e como investir de forma consciente
@@ -190,7 +195,7 @@
             </div>
             <!-- card 04  -->
             <div class="servico-card">
-                <i class="fas fa-piggy-bank"></i>
+                <i class="fas fa-piggy-bank" style = "color: black;"></i>
                 <h3>Poupança e Aposentadoria</h3>
                 <p>
                     Planeje sua aposentadoria e economize de forma eficaz para
@@ -199,7 +204,7 @@
             </div>
             <!-- card 05  -->
             <div class="servico-card">
-                <i class="fas fa-file-invoice-dollar"></i>
+                <i class="fas fa-file-invoice-dollar" style = "color: black;"></i>
                 <h3>Consultoria Fiscal</h3>
                 <p>
                     Oferecemos orientações sobre como organizar suas finanças
@@ -208,7 +213,7 @@
             </div>
             <!-- card 06  -->
             <div class="servico-card">
-                <i class="fas fa-hand-holding-usd"></i>
+                <i class="fas fa-hand-holding-usd" style = "color: black;"></i>
                 <h3>Créditos e Empréstimos</h3>
                 <p>
                     Entenda como funcionam os empréstimos, taxas de juros e crédito pessoal
@@ -397,9 +402,9 @@
 
             <div class="footer-contact">
                 <h3>Contact Info</h3>
-                <p><i class="fa fa-map-marker"></i> Cananéia-SP Brasil</p>
-                <p><i class="fa fa-envelope"></i> acessoriaEducaDin@gmail.com</p>
-                <p><i class="fa fa-phone"></i> +55 13 981326971</p>
+                <p><i class="fa fa-map-marker" style= "color: white;"></i> Cananéia-SP Brasil</p>
+                <p><i class="fa fa-envelope" style= "color: white;"></i> acessoriaEducaDin@gmail.com</p>
+                <p><i class="fa fa-phone"style= "color: white;"></i> +55 13 981326971</p>
             </div>
         </div>
 
