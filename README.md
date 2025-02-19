@@ -28,8 +28,7 @@ O objetivo principal desta versão expandida é continuar aprimorando o **front-
 ## 🔗 Projetos Relacionados
 
 - **[Meu Portfólio Pessoal](https://portif-lio-ericgoncalves.onrender.com/)**
-- **[Jogo Quiz do TCC](https://quiz-tcc.onrender.com/)**
-- **[Biblioteca JS Pura](https://biblioteca-js-pura.onrender.com/)**
+- **[Jogo Quiz do TCC](https://jogo-de-quiz-do-tcc.onrender.com/)**
 
 ## 🚀 Como Rodar o Projeto
 
