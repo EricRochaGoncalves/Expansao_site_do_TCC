@@ -10,7 +10,7 @@ function toggleMenu() {
     if (navLinks.classList.contains('active')) {
         hamburguer.innerHTML = '&times;'
     } else {
-        hamburguer.innerHTML = '&#9776;'
+        hamburguer.innerHTML = '<i class="fas fa-compass"></i>'
     }
 }
 
@@ -214,6 +214,8 @@ nextButton.onclick = () => {
 
 // Iniciar o quiz
 loadQuestion();
+
+
 
 
 
