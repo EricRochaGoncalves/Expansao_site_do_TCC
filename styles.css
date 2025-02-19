@@ -57,11 +57,11 @@ header {
     font-size: 50px;
     letter-spacing: 1px;
     margin: 0 auto;
-    color: white;
+    color: orange;
     padding: 0px 5px;
-    letter-spacing: 0.7px;
-    border-right: 1px solid white;
-    font-family: "Lobster", serif;
+    letter-spacing: 3px;
+    border-right: 1px solid orange;
+    
 }
 .logoimg {
     border: 1px solid white;
@@ -139,7 +139,7 @@ padding: 5px 5px;
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: white;
+    color: orange;
     
 }
 
