@@ -1,3 +1,37 @@
+// Exibe o modal quando a página carrega, se não houver a opção salva
+document.addEventListener("DOMContentLoaded", function () {
+    // Verifica se o item "naoMostrarModal" está salvo no localStorage
+    if (!localStorage.getItem("naoMostrarModal")) {
+        // Exibe o modal se a chave não estiver no localStorage
+        document.getElementById("modal-inicial").style.display = "flex";
+    }
+
+    // Adiciona o evento ao checkbox
+    document.getElementById("naoLembrar").addEventListener("change", function () {
+        // Verifica se a checkbox foi marcada
+        if (this.checked) {
+            // Marca no localStorage para não mostrar o modal novamente
+            localStorage.setItem("naoMostrarModal", "true");
+            // Fecha o modal
+            document.getElementById("modal-inicial").style.display = "none";
+        }
+    });
+});
+
+// Função para fechar o modal e salvar a preferência do usuário
+function fecharModal() {
+    if (document.getElementById("naoLembrar").checked) {
+        localStorage.setItem("naoMostrarModal", "true");
+    }
+    document.getElementById("modal-inicial").style.display = "none";
+}
+
+// Fecha o modal ao clicar fora da caixa
+document.getElementById("modal-inicial").addEventListener("click", function (event) {
+    if (event.target === this) {
+        fecharModal();
+    }
+});
 // Inicio de uma função 
 function toggleMenu() {
     // acessos os elementos a ser modificados
@@ -214,6 +248,27 @@ nextButton.onclick = () => {
 
 // Iniciar o quiz
 loadQuestion();
+// Função para fechar o modal e salvar a preferência do usuário
+function fecharModal() {
+    // Adiciona a classe fade-out para animação de saída
+    const modal = document.getElementById("modal-inicial");
+    modal.classList.add("fade-out");
+
+    // Aguarda a animação e depois oculta o modal
+    setTimeout(() => {
+        modal.style.display = "none";
+    }, 500); // Tempo igual à duração da animação
+}
+
+// Fecha o modal ao clicar fora da caixa
+document.getElementById("modal-inicial").addEventListener("click", function (event) {
+    if (event.target === this) {
+        fecharModal();
+    }
+});
+
+// Fechar o modal ao clicar no botão de fechar
+document.getElementById("fechar").addEventListener("click", fecharModal);
 
 
 
