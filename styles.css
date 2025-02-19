@@ -76,6 +76,9 @@ header {
     display: flex;
     gap: 1.25rem;
 }
+[id] {
+    scroll-margin-top: 60px; /* Ajuste conforme a altura da navbar */
+}
 
 .nav-links li {
     list-style: none;
