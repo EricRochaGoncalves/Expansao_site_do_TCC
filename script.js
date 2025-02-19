@@ -10,7 +10,7 @@ function toggleMenu() {
     if (navLinks.classList.contains('active')) {
         hamburguer.innerHTML = '&times;'
     } else {
-        hamburguer.innerHTML = '<i class="fas fa-compass"></i>'
+        hamburguer.innerHTML = '<i class="fas fa-compass" style = "color: orange;"></i>'
     }
 }
 
