@@ -35,6 +35,8 @@
     transition: opacity 0.5s ease; /* Animação de saída */
 }
 
+
+
 .modal.fade-out {
     opacity: 0;
 }
@@ -64,6 +66,17 @@ body {
 }
 html {
     scroll-pading
+}
+@keyframes anima_scroll {
+    0% {
+        opacity: 0;
+        transform: translate (-150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate (0px);
+        
+    }
 }
 
 /* Header */
@@ -303,6 +316,35 @@ padding: 5px 5px;
     color: var(--cor-fundo);
     backdrop-filter: blur(10px)
 }
+#btn_hero_03 {
+    margin: .625rem .625rem 0 0;
+    padding: .9375rem 1.5625rem;
+    border: 2px solid orange;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+    color: var(--cor-fundo);
+    backdrop-filter: blur(10px);
+    animation: btn_scroll 2s ease-in-out infinite;
+}
+#btn_hero_03:hover{
+    border: 2px solid white;
+    transition: 0.7s;
+}
+
+@keyframes btn_scroll {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Move para cima */
+    }
+    100% {
+        transform: translateY(0); /* Retorna à posição original */
+    }
+}
+
 #btn_hero_02 a {
     text-decoration: none;
     color: white;
@@ -353,6 +395,11 @@ padding: 5px 5px;
     width: 15.625rem;
     height: 13.75rem;
     perspective: 62.5rem;
+    
+    animation: anima_scroll linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+    
 }
 
 .flip-card-inner {
@@ -736,6 +783,9 @@ padding: 5px 5px;
     transition: transform 0.3s ease, background-color 0.3s ease;
     box-shadow: 0 .5rem .9375rem rgba(0, 0, 0, 0.2);
     margin: 1.25rem;
+    animation: anima_scroll linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
 }
 
 /* Efeito hover nos cartões */
