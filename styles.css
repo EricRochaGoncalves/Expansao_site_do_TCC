@@ -125,6 +125,7 @@ header {
     list-style-type: none;
     display: flex;
     gap: 1.25rem;
+    right: 0;
 }
 [id] {
     scroll-margin-top: 60px; /* Ajuste conforme a altura da navbar */
