@@ -19,8 +19,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* Estilização do modal */
-./* Estilização do modal */
+
+
 .modal {
     display: none; /* Inicialmente oculto */
     position: fixed;
@@ -82,7 +82,7 @@ html {
 /* Header */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: fixed;
     z-index: 10;
@@ -91,6 +91,27 @@ header {
     background-color: black;
     height: 15vh;
     border-bottom: 2px solid orange;
+}
+.message_box {
+    display: flex;
+    width: 15%;
+    height: 100%;
+    
+    justify-content: center;
+    align-items: center;
+    
+}
+.message_box a{
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-left: 1px solid orange;
+}
+.message_box a:hover{
+    color: orange;
+    transition: 0.5s;
 }
 
 .logo {
@@ -110,7 +131,10 @@ header {
     color: orange;
     padding: 0px 5px;
     letter-spacing: 3px;
+    line-height: 25px;
     border-right: 1px solid orange;
+    font-weight: bold;
+    text-align: center;
     
 }
 .logoimg {
@@ -125,7 +149,7 @@ header {
     list-style-type: none;
     display: flex;
     gap: 1.25rem;
-    right: 0;
+    right: 0px;
 }
 [id] {
     scroll-margin-top: 60px; /* Ajuste conforme a altura da navbar */
@@ -215,6 +239,9 @@ padding: 5px 5px;
         border-bottom: 1px solid white;
         
          
+    }
+    .message_box {
+        display: none;
     }
     .nav-links li a {
         color: white;
