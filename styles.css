@@ -1728,28 +1728,34 @@ h1 {
         padding: .625rem;
     }
 }
+
 .carrossel_section {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 50vh;
-}
-.carrossel-container {
-    
-    width: 100%;
     overflow: hidden;
-    margin: auto;
-    justify-content: center;
 }
-.carrossel-container h1{
+
+.carrossel-container {
+    width: 80%; /* Define uma largura fixa */
+    max-width: 500px; /* Define um tamanho máximo para não ficar grande demais */
+    overflow: hidden;
+    position: relative;
+}
+
+.carrossel-container h1 {
     text-align: center;
 }
 
 .carrossel {
     display: flex;
+    width: 100%;
     transition: transform 0.5s ease-in-out;
 }
 
 .carrossel img {
-    width: 100%; /* Cada imagem ocupa 100% da largura do carrossel */
-    height: auto;
+    width: 100%; /* Cada imagem ocupa todo o espaço do carrossel */
+    flex-shrink: 0; /* Impede que as imagens diminuam */
 }
