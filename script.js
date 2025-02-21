@@ -93,23 +93,17 @@ const carrossel = document.querySelector('.carrossel');
 function mudarImagem(direction) {
     currentIndex += direction;
 
-    // Garantir que o índice não ultrapasse os limites
     if (currentIndex < 0) {
-        currentIndex = images.length - 1; // Volta para a última imagem
+        currentIndex = images.length - 1;
     } else if (currentIndex >= images.length) {
-        currentIndex = 0; // Volta para a primeira imagem
+        currentIndex = 0;
     }
 
-    // Calcula a largura das imagens
-    const imageWidth = images[0].clientWidth;
-
-    // Muda a posição do carrossel
-    carrossel.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+    carrossel.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
 // Automatiza a troca das imagens a cada 3 segundos
-setInterval(() => mudarImagem(1), 3000); // Muda a imagem a cada 3 segundos
-
+setInterval(() => mudarImagem(1), 3000);
 //  Final dos slides
 
 const questions = [
