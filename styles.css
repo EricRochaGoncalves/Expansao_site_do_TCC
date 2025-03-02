@@ -65,7 +65,7 @@ body {
     background-color: black;
 }
 html {
-    scroll-pading
+    scroll-padding: smooth;
 }
 @keyframes anima_scroll {
     0% {
@@ -89,7 +89,7 @@ header {
     background-color: white;
     width: 100%;
     background-color: black;
-    height: 15vh;
+    height: 8vh;
     border-bottom: 2px solid orange;
 }
 .message_box {
@@ -849,11 +849,13 @@ padding: 5px 5px;
 .modal-conteudo {
     background-color: #fff;
     margin: 15% auto;
-    padding: 20px;
+    padding: 20px 50px;
     border-radius: 5px;
     width: 60%;
+    height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    font-weight: bold;
 }
 
 .fechar {
