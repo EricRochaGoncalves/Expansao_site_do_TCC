@@ -273,6 +273,20 @@ document.getElementById("modal-inicial").addEventListener("click", function (eve
 // Fechar o modal ao clicar no botão de fechar
 document.getElementById("fechar").addEventListener("click", fecharModal);
 
+function abrirModal(id) {
+    document.getElementById(id).style.display = "flex";
+}
+
+function fecharModal(id) {
+    document.getElementById(id).style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target.classList.contains("modal")) {
+        event.target.style.display = "none";
+    }
+}
+
 
 
 
