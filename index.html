@@ -202,59 +202,118 @@
         <h2>Nossos serviços exclusivos</h2>
         <div class="servicos-container">
             <!-- card 01  -->
-            <div class="servico-card">
-                <i class="fas fa-wallet" style = "color: black;"></i>
-                <h3>Planejamento Financeiro</h3>
-                <p>
-                    Auxiliamos no controle financeir de gastos e Planejamento
-                    financeiro pessoal para garantir uma vida financeira saúdavel.
-                </p>
-            </div>
-            <!-- card 02  -->
-            <div class="servico-card">
-                <i class="fas fa-chart-line" style = "color: black;"></i>
-                <h3>Investimentos</h3>
-                <p>
-                    Aprenda sobre os melhores investimentos para construir patrimônio
-                    e alcança a independência financeira.
-                </p>
-            </div>
-            <!-- card 03  -->
-            <div class="servico-card">
-                <i class="fas fa-coins" style = "color: black;"></i>
-                <h3>Educação em Criptomoedas</h3>
-                <p>
-                    Entenda como funciona o mercado de criptomoedas e como investir de forma consciente
-                    nesse novo segmento.
-                </p>
-            </div>
-            <!-- card 04  -->
-            <div class="servico-card">
-                <i class="fas fa-piggy-bank" style = "color: black;"></i>
-                <h3>Poupança e Aposentadoria</h3>
-                <p>
-                    Planeje sua aposentadoria e economize de forma eficaz para
-                    garantir um futuro tranquilo.
-                </p>
-            </div>
-            <!-- card 05  -->
-            <div class="servico-card">
-                <i class="fas fa-file-invoice-dollar" style = "color: black;"></i>
-                <h3>Consultoria Fiscal</h3>
-                <p>
-                    Oferecemos orientações sobre como organizar suas finanças
-                    e impostos para maximizar seus ganhos.
-                </p>
-            </div>
-            <!-- card 06  -->
-            <div class="servico-card">
-                <i class="fas fa-hand-holding-usd" style = "color: black;"></i>
-                <h3>Créditos e Empréstimos</h3>
-                <p>
-                    Entenda como funcionam os empréstimos, taxas de juros e crédito pessoal
-                    para evitar dívidas.
-                </p>
-            </div>
+            
+
+<!-- Cards de serviço -->
+<div class="servico-card" id="card1" onclick="abrirModal('modal-card1')">
+    <i class="fas fa-wallet" style="color: black;"></i>
+    <h3>Planejamento Financeiro</h3>
+    <p>
+        Auxiliamos no controle financeiro de gastos e Planejamento
+        financeiro pessoal para garantir uma vida financeira saudável.
+    </p>
+</div>
+
+<div class="servico-card" id="card2" onclick="abrirModal('modal-card2')">
+    <i class="fas fa-chart-line" style="color: black;"></i>
+    <h3>Investimentos</h3>
+    <p>
+        Aprenda sobre os melhores investimentos para construir patrimônio
+        e alcançar a independência financeira.
+    </p>
+</div>
+
+<div class="servico-card" id="card3" onclick="abrirModal('modal-card3')">
+    <i class="fas fa-coins" style="color: black;"></i>
+    <h3>Educação em Criptomoedas</h3>
+    <p>
+        Entenda como funciona o mercado de criptomoedas e como investir de forma consciente
+        nesse novo segmento.
+    </p>
+</div>
+
+<div class="servico-card" id="card4" onclick="abrirModal('modal-card4')">
+    <i class="fas fa-piggy-bank" style="color: black;"></i>
+    <h3>Poupança e Aposentadoria</h3>
+    <p>
+        Planeje sua aposentadoria e economize de forma eficaz para
+        garantir um futuro tranquilo.
+    </p>
+</div>
+
+<div class="servico-card" id="card5" onclick="abrirModal('modal-card5')">
+    <i class="fas fa-file-invoice-dollar" style="color: black;"></i>
+    <h3>Consultoria Fiscal</h3>
+    <p>
+        Oferecemos orientações sobre como organizar suas finanças
+        e impostos para maximizar seus ganhos.
+    </p>
+</div>
+
+<div class="servico-card" id="card6" onclick="abrirModal('modal-card6')">
+    <i class="fas fa-hand-holding-usd" style="color: black;"></i>
+    <h3>Créditos e Empréstimos</h3>
+    <p>
+        Entenda como funcionam os empréstimos, taxas de juros e crédito pessoal
+        para evitar dívidas.
+    </p>
+</div>
+
+<!-- Modais -->
+<div class="modal" id="modal-card1">
+    <div class="modal-conteudo">
+        <span class="fechar" onclick="fecharModal('modal-card1')">&times;</span>
+        <h3>Planejamento Financeiro</h3>
+        <p>Detalhes completos sobre planejamento financeiro.</p>
+    </div>
+</div>
+
+<div class="modal" id="modal-card2">
+    <div class="modal-conteudo">
+        <span class="fechar" onclick="fecharModal('modal-card2')">&times;</span>
+        <h3>Investimentos</h3>
+        <p>Detalhes completos sobre investimentos.</p>
+    </div>
+</div>
+
+<div class="modal" id="modal-card3">
+    <div class="modal-conteudo">
+        <span class="fechar" onclick="fecharModal('modal-card3')">&times;</span>
+        <h3>Educação em Criptomoedas</h3>
+        <p>Detalhes completos sobre criptomoedas.</p>
+    </div>
+</div>
+
+<div class="modal" id="modal-card4">
+    <div class="modal-conteudo">
+        <span class="fechar" onclick="fecharModal('modal-card4')">&times;</span>
+        <h3>Poupança e Aposentadoria</h3>
+        <p>Detalhes completos sobre aposentadoria.</p>
+    </div>
+</div>
+
+<div class="modal" id="modal-card5">
+    <div class="modal-conteudo">
+        <span class="fechar" onclick="fecharModal('modal-card5')">&times;</span>
+        <h3>Consultoria Fiscal</h3>
+        <p>Detalhes completos sobre consultoria fiscal.</p>
+    </div>
+</div>
+
+<div class="modal" id="modal-card6">
+    <div class="modal-conteudo">
+        <span class="fechar" onclick="fecharModal('modal-card6')">&times;</span>
+        <h3>Créditos e Empréstimos</h3>
+        <p>Detalhes completos sobre créditos e empréstimos. </p>
+    </div>
+</div>
+
+
+
+
+
+
+
         </div>
                     <button id="btn_hero_03"> <a href="#process"><i class="fa-solid fa-computer-mouse fa-xl" style="color: #d96614; font-size: 25px;"></i>       <i class="fa-solid fa-arrow-down fa-xl" style="color: #ff5900;"></i></a></a></button><br>
             
