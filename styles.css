@@ -90,7 +90,7 @@ header {
     width: 100%;
     background-color: black;
     height: 8vh;
-    border-bottom: 2px solid orange;
+    border-bottom: 2px solid white;
 }
 .message_box {
     display: flex;
@@ -128,11 +128,11 @@ header {
     font-size: 25px;
     letter-spacing: 1px;
     margin: 0 auto;
-    color: orange;
+    color: white;
     padding: 0px 5px;
     letter-spacing: 3px;
     line-height: 25px;
-    border-right: 1px solid orange;
+    border-right: 2px solid white;
     font-weight: bold;
     text-align: center;
     
@@ -345,6 +345,7 @@ padding: 5px 5px;
     backdrop-filter: blur(10px)
 }
 #btn_hero_03 {
+    
     margin: .625rem .625rem 0 0;
     padding: .9375rem 1.5625rem;
     border: 2px solid orange;
@@ -356,9 +357,14 @@ padding: 5px 5px;
     backdrop-filter: blur(10px);
     animation: btn_scroll 2s ease-in-out infinite;
 }
+#btn_hero_03 a {
+    text-decoration: none;
+    padding: 20px 20px;
+}
 #btn_hero_03:hover{
     border: 2px solid white;
     transition: 0.7s;
+    
 }
 
 @keyframes btn_scroll {
@@ -533,7 +539,7 @@ padding: 5px 5px;
     padding: 0
 }
 .developer_perfil h1{
-    color: orange;
+    color: white;
     padding: 0 20px;
     letter-spacing: 1px;
     
