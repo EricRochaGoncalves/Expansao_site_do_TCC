@@ -245,4 +245,24 @@ function mudarImagem(direction) {
 // Chama mudarImagem com intervalos para automatizar a troca das imagens
 setInterval(() => mudarImagem(1), 3000); // Muda a imagem a cada 3 segundos
 
-//  Final dos slides
+// Função para abrir o modal
+function abrirModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = "flex";
+}
+
+// Função para fechar o modal
+function fecharModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = "none";
+}
+
+// Fecha o modal se o usuário clicar fora dele
+window.onclick = function(event) {
+    var modais = document.getElementsByClassName("modal");
+    for (var i = 0; i < modais.length; i++) {
+        if (event.target == modais[i]) {
+            modais[i].style.display = "none";
+        }
+    }
+}
