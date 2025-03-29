@@ -1,37 +1,3 @@
-// Exibe o modal quando a página carrega, se não houver a opção salva
-document.addEventListener("DOMContentLoaded", function () {
-    // Verifica se o item "naoMostrarModal" está salvo no localStorage
-    if (!localStorage.getItem("naoMostrarModal")) {
-        // Exibe o modal se a chave não estiver no localStorage
-        document.getElementById("modal-inicial").style.display = "flex";
-    }
-
-    // Adiciona o evento ao checkbox
-    document.getElementById("naoLembrar").addEventListener("change", function () {
-        // Verifica se a checkbox foi marcada
-        if (this.checked) {
-            // Marca no localStorage para não mostrar o modal novamente
-            localStorage.setItem("naoMostrarModal", "true");
-            // Fecha o modal
-            document.getElementById("modal-inicial").style.display = "none";
-        }
-    });
-});
-
-// Função para fechar o modal e salvar a preferência do usuário
-function fecharModal() {
-    if (document.getElementById("naoLembrar").checked) {
-        localStorage.setItem("naoMostrarModal", "true");
-    }
-    document.getElementById("modal-inicial").style.display = "none";
-}
-
-// Fecha o modal ao clicar fora da caixa
-document.getElementById("modal-inicial").addEventListener("click", function (event) {
-    if (event.target === this) {
-        fecharModal();
-    }
-});
 // Inicio de uma função 
 function toggleMenu() {
     // acessos os elementos a ser modificados
@@ -40,11 +6,11 @@ function toggleMenu() {
     // Inserimos uma nova classe
     navLinks.classList.toggle('active')
 
-  
+
     if (navLinks.classList.contains('active')) {
         hamburguer.innerHTML = '&times;'
     } else {
-        hamburguer.innerHTML = '<i class="fas fa-compass" style = "color: orange;"></i>'
+        hamburguer.innerHTML = '<i class="fas fa-compass" style="color: orange;"></i>'
     }
 }
 
@@ -67,12 +33,14 @@ document.querySelectorAll('.close-btn').forEach(button => {
 })
 
 window.addEventListener('click', (event) => {
- 
+
   if (event.target.classList.contains('modal')) {
       event.target.style.display = 'none'
   }
 
 })
+
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function(e) {
         e.preventDefault();
@@ -85,26 +53,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
- // Muda a imagem a cada 3 segundos
-let currentIndex = 0;
-const images = document.querySelectorAll('.carrossel img');
-const carrossel = document.querySelector('.carrossel');
 
-function mudarImagem(direction) {
-    currentIndex += direction;
+// logica para ativar após clicar em serviços
+document.querySelectorAll('.servico-card').forEach(div => {
 
-    if (currentIndex < 0) {
-        currentIndex = images.length - 1;
-    } else if (currentIndex >= images.length) {
-        currentIndex = 0;
-    }
+    div.addEventListener('click', () => {
 
-    carrossel.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
+         const aparecer = document.getElementById(div.dataset.aparecer)
 
-// Automatiza a troca das imagens a cada 3 segundos
-setInterval(() => mudarImagem(1), 3000);
-//  Final dos slides
+         aparecer.style.display = 'flex'
+    })
+
+})
+document.querySelectorAll('.aparecer').forEach(div => {
+
+  div.addEventListener('click', () => {
+      div.closest('.aparecer').style.display = 'none'
+  })
+})
+
+window.addEventListener('click', (event) => {
+
+  if (event.target.classList.contains('aparecer')) {
+      event.target.style.display = 'none'
+  }
+
+})
+
+//  Quiz do TCC
 
 const questions = [
     {
@@ -176,9 +152,9 @@ const errorText = document.getElementById('error-text');
 
 function loadQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
-    
+
     questionElement.textContent = currentQuestion.question;
-    
+
     optionsElement.innerHTML = '';
     currentQuestion.options.forEach((option, index) => {
         const optionElement = document.createElement('div');
@@ -249,46 +225,24 @@ nextButton.onclick = () => {
     nextButton.style.display = 'none'; // Esconde o botão até a resposta ser dada
 };
 
-// Iniciar o quiz
 loadQuestion();
-// Função para fechar o modal e salvar a preferência do usuário
-function fecharModal() {
-    // Adiciona a classe fade-out para animação de saída
-    const modal = document.getElementById("modal-inicial");
-    modal.classList.add("fade-out");
+//  Final do QUIZ
 
-    // Aguarda a animação e depois oculta o modal
-    setTimeout(() => {
-        modal.style.display = "none";
-    }, 500); // Tempo igual à duração da animação
-}
+// Slides
+let currentIndex = 0;
+const images = document.querySelectorAll('.carrossel img');
 
-// Fecha o modal ao clicar fora da caixa
-document.getElementById("modal-inicial").addEventListener("click", function (event) {
-    if (event.target === this) {
-        fecharModal();
+function mudarImagem(direction) {
+    currentIndex += direction;
+    if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+    } else if (currentIndex >= images.length) {
+        currentIndex = 0;
     }
-});
-
-// Fechar o modal ao clicar no botão de fechar
-document.getElementById("fechar").addEventListener("click", fecharModal);
-
-function abrirModal(id) {
-    document.getElementById(id).style.display = "flex";
+    document.querySelector('.carrossel').style.transform = `translateX(-${currentIndex * 600}px)`;
 }
 
-function fecharModal(id) {
-    document.getElementById(id).style.display = "none";
-}
+// Chama mudarImagem com intervalos para automatizar a troca das imagens
+setInterval(() => mudarImagem(1), 3000); // Muda a imagem a cada 3 segundos
 
-window.onclick = function(event) {
-    if (event.target.classList.contains("modal")) {
-        event.target.style.display = "none";
-    }
-}
-
-
-
-
-
-
+//  Final dos slides
