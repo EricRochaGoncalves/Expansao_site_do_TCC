@@ -1,6 +1,7 @@
 /* import */
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Parisienne&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Parisienne&display=swap');
 /* root - Cores principais */
 :root {
     --cor-destaque: #0c656a;
@@ -125,7 +126,7 @@ header {
     
 }
 .logo h1 {
-    font-size: 25px;
+    font-size: 19px;
     letter-spacing: 1px;
     margin: 0 auto;
     color: white;
