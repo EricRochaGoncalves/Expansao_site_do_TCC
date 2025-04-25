@@ -293,7 +293,7 @@ header {
   background-color: #2E2E2E;
 
 
-    color: var(--cor-texto);
+    color: white;
     letter-spacing: 0.7px;
     font-weight: 200;
 }
@@ -690,36 +690,36 @@ header {
 }
 
 .fechar:hover {
-    color: black;
+    color: white;
 }
 
 .servico-card i {
     font-size: 2.5rem;
-    color: var(--cor-secundaria);
+    color: white;
     margin-bottom: .625rem;
 }
 
 .servico-card:hover i {
-    color: black;
+    color: white;
 }
 
 .servico-card h3 {
     font-size: 1.375rem;
     margin-bottom: .625rem;
-    color: black;
+    color: white;
 }
 
 .servico-card:hover h3 {
-    color: black;
+    color: white;
 }
 
 .servico-card p {
     font-size: .875rem;
-    color: black;
+    color: white;
 }
 
 .servico-card:hover p {
-    color: black;
+    color: white;
 }
 
 /* Responsividade */
