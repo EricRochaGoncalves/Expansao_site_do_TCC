@@ -1,7 +1,6 @@
-/* import */
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Parisienne&display=swap');
+/* import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 /* root - Cores principais */
 :root {
     --cor-destaque: #0c656a;
@@ -14,7 +13,7 @@
 }
 
 
-/* Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -22,47 +21,10 @@
 }
 
 
-.modal {
-    display: none; /* Inicialmente oculto */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-    transition: opacity 0.5s ease; /* Animação de saída */
-}
-
-
-
-.modal.fade-out {
-    opacity: 0;
-}
-
-.modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    width: 300px;
-    position: relative;
-}
-
-/* Estilização do botão de fechar */
-#fechar {
-    padding: 10px 15px;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: white;
-    cursor: pointer;
-}
 
 /* Body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
     background-color: black;
 }
 html {
@@ -71,11 +33,33 @@ html {
 @keyframes anima_scroll {
     0% {
         opacity: 0;
-        transform: translate (-150px);
+        transform: translate(150px);
     }
     100% {
         opacity: 1;
-        transform: translate (0px);
+        transform: translate(0px);
+        
+    }
+}
+@keyframes anima_scroll2 {
+    0% {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+        
+    }
+}
+@keyframes fadeIn01 {
+    0% {
+        opacity: 0;
+        
+    }
+    100% {
+        opacity: 1;
+        
         
     }
 }
@@ -83,7 +67,7 @@ html {
 /* Header */
 header {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     position: fixed;
     z-index: 10;
@@ -93,57 +77,9 @@ header {
     height: 8vh;
     border-bottom: 2px solid white;
 }
-.message_box {
-    display: flex;
-    width: 15%;
-    height: 100%;
-    
-    justify-content: center;
-    align-items: center;
-    
-}
-.message_box a{
-    text-decoration: none;
-    color: white;
-    letter-spacing: 1px;
-    font-weight: bold;
-    padding: 10px 15px;
-    border-left: 1px solid orange;
-}
-.message_box a:hover{
-    color: orange;
-    transition: 0.5s;
-}
 
-.logo {
-    display: flex;
-    width: 15%;
-    height: 100%;
-    font-weight: bold;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    
-}
-.logo h1 {
-    font-size: 19px;
-    letter-spacing: 1px;
-    margin: 0 auto;
-    color: white;
-    padding: 0px 5px;
-    letter-spacing: 3px;
-    line-height: 25px;
-    border-right: 2px solid white;
-    font-weight: bold;
-    text-align: center;
-    
-}
-.logoimg {
-    border: 1px solid white;
-    width: 50px;
-    height: 50px;
-    display: flex;
-}
+
+
 
 
 .nav-links {
@@ -163,30 +99,17 @@ header {
 .nav-links li a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
+    font-weight: 200;
     letter-spacing: 1px;
 }
 .nav-links li a:hover {
-    color: gray;
-    transition: 0.5s;
-    border-bottom: 1px solid black;
+    
+    transition: 0.2s;
+    letter-spacing: 2px;
     transition: 0.5s;
     transform: scale(1.2);
 }
-#summary {
-    color: white;
-    font-weight: bold;
-}
-details {
-    justify-content: center;
-}
-#details_links {
-color: white;
-text-decoration: none;
-padding: 5px 5px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
+
 
 
 /* Botões ou ícones */
@@ -194,25 +117,7 @@ padding: 5px 5px;
     display: flex;
 }
 
-#btn-header {
-    background-color: var(--cor-destaque);
-    padding: .9375rem 1.5625rem;
-    border: none;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
 
-    color: var(--cor-fundo);
-}
-#btn-header a{
-    text-decoration: none;
-    color: white;
-    letter-spacing: 1px;
-}
-#btn-header:hover{
-    background-color: white ;
-    transition: 0.5s;
-    cursor: pointer;
-}
 /* Hamburguer Menu */
 .hamburguer {
     display: none;
@@ -240,9 +145,6 @@ padding: 5px 5px;
         border-bottom: 1px solid white;
         
          
-    }
-    .message_box {
-        display: none;
     }
     .nav-links li a {
         color: white;
@@ -313,7 +215,9 @@ padding: 5px 5px;
     margin-bottom: 1.25rem;
     letter-spacing: 0.5px;
     color: white;
-    border-bottom: 2px solid white;
+    font-weight: 200;
+    animation: anima_scroll 1s;
+    
 }
 
 .hero-content p {
@@ -321,92 +225,13 @@ padding: 5px 5px;
     margin-bottom: 1.875rem;
     color: var(--cor-fundo);
     letter-spacing: 0.7px;
-}
-
-#btn_hero_01 {
-    margin: .625rem .625rem 0 0;
-    padding: .9375rem 1.5625rem;
-    border: 2px solid white;
-    cursor: pointer;
-    border-bottom-left-radius: 10px;
-    transition: background-color 0.3s ease;
-   background: transparent;
-    color: var(--cor-fundo);
-    backdrop-filter: blur(10px)
-}
-#btn_hero_02 {
-    margin: .625rem .625rem 0 0;
-    padding: .9375rem 1.5625rem;
-    border: 2px solid white;
-    cursor: pointer;
-    border-bottom-right-radius: 10px;
-    transition: background-color 0.3s ease;
-    background-color: transparent;
-    color: var(--cor-fundo);
-    backdrop-filter: blur(10px)
-}
-#btn_hero_03 {
-    
-    margin: .625rem .625rem 0 0;
-    padding: .9375rem 1.5625rem;
-    border: 2px solid orange;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
-    background-color: transparent;
-    color: var(--cor-fundo);
-    backdrop-filter: blur(10px);
-    animation: btn_scroll 2s ease-in-out infinite;
-}
-#btn_hero_03 a {
-    text-decoration: none;
-    padding: 20px 20px;
-}
-#btn_hero_03:hover{
-    border: 2px solid white;
-    transition: 0.7s;
-    
-}
-
-@keyframes btn_scroll {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px); /* Move para cima */
-    }
-    100% {
-        transform: translateY(0); /* Retorna à posição original */
-    }
-}
-
-#btn_hero_02 a {
-    text-decoration: none;
-    color: white;
-    letter-spacing: 1px;
-    font-weight: bold;
-
+    font-weight: 200;
+    animation: anima_scroll2 2s;
 }
 
 
-#btn_hero_01 a {
-    text-decoration: none;
-    color: white;
-    letter-spacing: 1px;
-    font-weight: bold;
 
-}
 
-#btn_hero_01:hover {
-    background-color: var(--cor-secundaria);
-    color: var(--cor-fundo);
-    border: 1px solid var(--cor-secundaria);
-}
-#btn_hero_02:hover{
-    background-color: var(--cor-secundaria);
-    color: var(--cor-fundo);
-    border: 1px solid var(--cor-secundaria);
-}
 
 
 /* Cards */
@@ -414,19 +239,16 @@ padding: 5px 5px;
     display: flex;
     justify-content: center;
     padding: 3.75rem 2.5rem;
-    backgrou
+    background: linear-gradient(to right, #2E2E2E, #4B4B4B); /* Gradiente suave entre dois tons de cinza escuro */
     flex-wrap: wrap;
     margin-top: -9.375rem;
     gap: 1.25rem;
     
-  background: linear-gradient(to right, #2E2E2E, #4B4B4B); /* Gradiente suave entre dois tons de cinza escuro */
-
-   /* Cinza escuro, inspirado no estilo "Pique Batman" */
-
 }
 
+
 .flip-card {
-    background-color: transparent;
+    
     width: 15.625rem;
     height: 13.75rem;
     perspective: 62.5rem;
@@ -434,6 +256,7 @@ padding: 5px 5px;
     animation: anima_scroll linear;
     animation-timeline: view();
     animation-range: entry 0% cover 30%;
+    animation: fadeIn01 1s;
     
 }
 
@@ -445,7 +268,7 @@ padding: 5px 5px;
     transition: transform 0.6s ease;
     transform-style: preserve-3d;
     border-radius: .625rem;
-    box-shadow: 0 .25rem .5rem rgba(0, 0, 0, 0.2);
+   
     
 }
 
@@ -461,17 +284,18 @@ padding: 5px 5px;
     align-items: center;
     padding: 1.25rem;
     border-radius: .625rem;
+    font-weight: 200;
     
 }
 
 .flip-card-front {
     
-  background: linear-gradient(to right, #D3D3D3, #FFFFFF); /* Gradiente suave do cinza claro para o branco */
+  background-color: #2E2E2E;
 
 
     color: var(--cor-texto);
     letter-spacing: 0.7px;
-    font-weight: bold;
+    font-weight: 200;
 }
 
 .flip-card-back {
@@ -479,7 +303,7 @@ padding: 5px 5px;
     color: var(--cor-fundo);
     transform: rotateY(180deg);
     letter-spacing: 0.7px;
-    font-weight: bold;
+    font-weight: 200;
 }
 
 .flip-card:hover .flip-card-inner {
@@ -596,7 +420,7 @@ padding: 5px 5px;
 
 .text-column h5 {
     font-size: 1.125rem;
-    font-weight: bold;
+    font-weight: 200;
     margin-bottom: .625rem;
     color: white;
 }
@@ -605,6 +429,7 @@ padding: 5px 5px;
     font-size: 2rem;
     margin-bottom: 1.25rem;
     color: white;
+    font-weight: 200;
 }
 
 .text-column .highlight {
@@ -612,11 +437,11 @@ padding: 5px 5px;
 }
 
 .text-column p {
-    font-size: 1rem;
+    font-size: 15px;
     margin-bottom: 1.25rem;
     color: white;
     line-height: 25px;
-    font-weight: bold;
+    font-weight: 200;
 }
 
 /* Estilos dos Serviços */
@@ -643,7 +468,7 @@ padding: 5px 5px;
     text-align: start;
     margin: 0;
     font-size: 1.125rem;
-    font-weight: bold;
+    font-weight: 200;
     color: white;
 }
 
@@ -656,7 +481,7 @@ padding: 5px 5px;
 
 /* Botão de Leitura */
 .read-more {
-    background-color: gray;
+    background-color: transparent;
     border: none;
     color: black;
     padding: .9375rem 1.875rem;
@@ -668,11 +493,12 @@ padding: 5px 5px;
 }
 .read-more a {
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .read-more:hover {
-    background-color: var(--cor-secundaria);
+    letter-spacing: 1px;
+    transition: 0.5;
 }
 
 /* Responsividade */
@@ -795,6 +621,7 @@ padding: 5px 5px;
     font-size: 2.25rem;
     margin-bottom: 1.25rem;
     color: white;
+    font-weight: 200;
 }
 
 /* Container de Serviços */
@@ -811,7 +638,7 @@ padding: 5px 5px;
 .servico-card {
     cursor: pointer;
     width: 18.75rem;
-    background: linear-gradient(to right, #D3D3D3, #FFFFFF); 
+    background: linear-gradient(to right, #2E2E2E, #4B4B4B);
     border-radius: .5rem;
     padding: 1.25rem;
     text-align: center;
@@ -821,19 +648,8 @@ padding: 5px 5px;
     animation: anima_scroll 1s linear; /* Animação de entrada */
 }
 
-/* Animação de entrada */
-@keyframes anima_scroll {
-    0% {
-        opacity: 0;
-        transform: translateY(20px); /* Começa com o card fora da tela */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* Chega no lugar de forma suave */
-    }
-}
 
-/* Efeito de hover nos cards */
+
 .servico-card:hover {
     transform: scale(1.05);
     background-color: #f0f0f0; /* Leve mudança na cor do fundo */
@@ -930,9 +746,10 @@ padding: 5px 5px;
 }
 
 .process h2 {
-    color: black;
+    color: white;
     letter-spacing: .125rem;
     font-size: 25px;
+    font-weight: 200;
     margin-bottom: .625rem;
 }
 
@@ -940,6 +757,7 @@ padding: 5px 5px;
     font-size: 20px;
     margin-bottom: 3.125rem;
     color: var(--cor-texto);
+    font-weight: 200;
 }
 
 .process-steps {
@@ -975,13 +793,14 @@ padding: 5px 5px;
     font-size: 1.25rem;
     color: black;
     margin-bottom: 1.25rem;
+    font-weight: 200;
 }
 
 .step p {
     font-size: 15px;
     color: black;
     line-height: 1.6;
-    font-weight: bold;
+    font-weight: 200;
 }
 
 .step:not(:last-child) {
@@ -1216,7 +1035,7 @@ padding: 5px 5px;
 
 .stat h2 {
     font-size: 2.25rem;
-    font-weight: 700;
+    font-weight: 200;
     color: black;
 }
 
@@ -1224,7 +1043,7 @@ padding: 5px 5px;
     font-size: 1.125rem;
     color: var(--cor-opcional);
     letter-spacing: 0.7px;
-    font-weight: bold;
+    font-weight: 200;
 }
 
 @media (max-width: 48rem) {
@@ -1381,6 +1200,7 @@ padding: 5px 5px;
 h1 {
     color: white;
     margin-bottom: 20px;
+    font-weight: 200;
 }
 
 #quiz-container {
@@ -1390,7 +1210,7 @@ h1 {
 #question {
     font-size: 20px;
     margin-bottom: 15px;
-    font-weight: bold;
+    font-weight: 200;
     letter-spacing: 0.7px;
     color: white;
 }
@@ -1398,7 +1218,7 @@ h1 {
 #options {
     margin-bottom: 20px;
     color: black;
-    font-weight: bold;
+    font-weight: 200;
     letter-spacing: 1px;
 }
 
