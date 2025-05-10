@@ -32,18 +32,6 @@ As atualizações trouxeram um **design mais sério e profissional**, deixando a
 - **[Meu Portfólio Pessoal](https://portif-lio-ericgoncalves.onrender.com/)**
 - **[Jogo Quiz do TCC](https://jogo-de-quiz-do-tcc.onrender.com/)**
 
-## 🚀 Como Rodar o Projeto
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/ericgoncalves/versao-expandida-tcc.git
-   ```
-2. Acesse a pasta do projeto:
-   ```bash
-   cd versao-expandida-tcc
-   ```
-3. Abra o arquivo `index.html` em seu navegador.
-
 ## ✨ Sobre a STARPOOLK
 
 Antes de ser chamado de **"Educadin"**, o projeto possuía um nome original e conceitual: **STARPÖÖLK**. Esse nome carregava uma identidade mais criativa e inovadora, destacando a proposta de um sistema educacional dinâmico. No entanto, devido à necessidade de um nome mais genérico e comercial, ele foi substituído por "Educadin".
